@@ -1,0 +1,115 @@
+@import url(http://awebfont.ir/css?id=1116);
+@import url(http://awebfont.ir/css?id=1939);
+@import url(fonts.css);
+/*@font-face {*/
+/*  font-family: "B Yekan";*/
+/*  src: url(../fonts/Yekan.ttf) format("truetype"),*/
+/*    url(../fonts/BYekan.woff) format("woff"),*/
+/*    url(../fonts/BYekan.woff2) format("woff2");*/
+/*}*/
+/*@font-face {*/
+/*  font-family: "0 Titr Bold";*/
+/*  src: url(../fonts/TitrBold.ttf) format("truetype"),*/
+/*    url(../fonts/TitrBold.woff) format("woff"),*/
+/*    url(../fonts/TitrBold.woff2) format("woff2");*/
+/*}*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(/static/blog/image/moonlight.jpg);
+  font-family: "Yekan.ttf","BYekan.woff","BYekan.woff2","TitrBold.ttf","TitrBold.woff","TitrBold.woff2",Verdana,Arial,sans-serif;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #292929;
+  background-blend-mode: hard-light;
+  min-width: 570px;
+}
+.container {
+  width: 100%;
+  max-width: 2000px;
+  margin: auto;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+}
+.card {
+  width: 600px;
+  height: 360px;
+  display: flex;
+  margin: 40px 40px;
+  background-color: rgba(41, 40, 40, 0.89);
+  box-shadow: 0 0 40px rgb(107, 107, 107);
+  border-radius: 10px 25px 10px 25px;
+}
+.card-prof {
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  background-color: rgba(70, 70, 70, 0.747);
+  border-radius: 10px 25px 10px 25px;
+  margin-right: 30px;
+  position: relative;
+  bottom: 30px;
+}
+.card-prof a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 3px;
+}
+.card-prof a:hover {
+  color: gray;
+}
+.card-bgn {
+  width: 100%;
+  width: 220px;
+  height: 250px;
+  border-radius: 10px 25px 10px 25px;
+}
+.card-desc {
+  padding: 22px;
+  text-align: justify;
+  color: rgb(255, 255, 255);
+  font-family: "B Yekan";
+  font-size: 15px;
+  overflow-y: scroll;
+}
+@media screen and (max-width: 1375px) {
+  .card {
+    width: 500px;
+    margin: 40px 0px;
+  }
+  .card-prof {
+    margin-right: 15px;
+  }
+  .card-bgn {
+    width: 200px;
+  }
+  .card-prof a {
+    font-size: 14px;
+  }
+  .card-desc {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 980px) {
+  body {
+    background-position: 22%;
+  }
+}
+@media screen and (max-width: 570px) {
+  .card {
+    width: 450px;
+  }
+  .card-bgn {
+    width: 180px;
+  }
+  .card-prof a {
+    font-size: 16px;
+  }
+}

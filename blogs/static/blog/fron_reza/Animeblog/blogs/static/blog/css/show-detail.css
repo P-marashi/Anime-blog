@@ -1,0 +1,418 @@
+@import url(http://awebfont.ir/css?id=1116&mode=wlt);
+@import url(http://awebfont.ir/css?id=1939);
+body {
+  font-family: "B Yekan";
+  margin: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  max-width: 1795px;
+  margin: 0 auto;
+  direction: rtl;
+}
+header {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  background: #2c3e50;
+}
+header h1 {
+  color: white;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+nav {
+  display: flex;
+  position: relative;
+  margin: auto;
+  height: 50px;
+  background: #34495e;
+  border-radius: 8px;
+  font-size: 0;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+}
+nav a {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  line-height: 50px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+nav .animation {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  background: #1abc9c;
+  border-radius: 8px;
+  transition: all 0.5s ease 0s;
+}
+nav a:nth-child(1) {
+  width: 100px;
+}
+nav .start-home,
+a:nth-child(1):hover ~ .animation {
+  width: 100px;
+  right: 0;
+}
+nav a:nth-child(2) {
+  width: 130px;
+}
+nav a:nth-child(2):hover ~ .animation {
+  width: 130px;
+  right: 100px;
+}
+nav a:nth-child(3) {
+  width: 130px;
+}
+nav a:nth-child(3):hover ~ .animation {
+  width: 130px;
+  right: 230px;
+}
+nav a:nth-child(4) {
+  width: 140px;
+}
+nav a:nth-child(4):hover ~ .animation {
+  width: 140px;
+  right: 360px;
+}
+input {
+  direction: ltr;
+  margin-right: 20%;
+  margin-top: 1%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  background: transparent;
+  width: 15px;
+  height: 15px;
+  padding: 10px;
+  border: solid 3px #9a86fd;
+  outline: none;
+  border-radius: 35px;
+  transition: all 0.5s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #9a86fd;
+}
+
+input::placeholder {
+  color: #efefef;
+  opacity: 0;
+  transition: opacity 150ms ease-out;
+}
+
+input:focus::placeholder {
+  opacity: 1;
+}
+
+input:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #ffbb70;
+}
+
+input:focus,
+input:not(:placeholder-shown) {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #ffbb70;
+}
+.bgn {
+  height: 800px;
+  width: 100%;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
+}
+main {
+  display: grid;
+  grid-template-columns: 3fr 6fr 3fr;
+  background-color: #ededed;
+  margin: auto;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  margin: 10px 100px 10px 20px;
+}
+.item {
+  width: 282px;
+  border: 1px solid #2c3e50;
+  box-shadow: 0 0 15px #424242;
+}
+.card img {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.card h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.card p {
+  text-align: justify;
+  width: 270px;
+  display: inline-block;
+  margin-top: 0px;
+  padding: 5px;
+  font-size: 1.1em;
+}
+main .content {
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  margin: 0px 3%;
+}
+main .content p {
+  text-align: justify;
+  font-size: 1.2em;
+}
+main .content h1 {
+  font-size: 2em;
+}
+main .content h2,
+h3,
+h4,
+h5,
+h6 {
+  align-self: flex-start;
+  font-size: 2em;
+}
+main .content img {
+  height: 430px;
+  margin: 5px 3% 15px 3%;
+}
+main .menu {
+  direction: ltr;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 10px;
+  text-align: center;
+}
+main .menu span {
+  border-bottom: 1px solid #444;
+  margin-bottom: 10px;
+  background-image: url(../../../../media/images/bgn.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: #4e4e4e;
+  background-blend-mode: hard-light;
+  border: 3px solid #34495e;
+}
+main .menu span a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.3em;
+  line-height: 100px;
+}
+main .menu span a:hover {
+  color: orange;
+}
+footer {
+  background-color: #2c3e50;
+}
+.footer-section {
+  text-align: center;
+  padding: 50px 0;
+  color: #999;
+}
+.socials a {
+  font-size: 30px;
+  padding: 10px;
+  color: #999;
+  text-decoration: none;
+}
+.socials a:hover {
+  color: #288ed9;
+}
+@media screen and (max-width: 1375px) {
+  main {
+    grid-template-columns: 4fr 8fr;
+  }
+  .menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 1100px) {
+  main .menu span a {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .bgn {
+    height: 650px;
+  }
+}
+@media screen and (max-width: 950px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    display: none;
+  }
+}
+@media screen and (max-width: 850px) {
+  .bgn {
+    height: 500px;
+  }
+  .header-title {
+    font-size: 18px;
+  }
+  nav a:nth-child(1) {
+    width: 80px;
+  }
+  nav .start-home,
+  a:nth-child(1):hover ~ .animation {
+    width: 80px;
+    right: 0;
+  }
+  nav a:nth-child(2) {
+    width: 110px;
+  }
+  nav a:nth-child(2):hover ~ .animation {
+    width: 110px;
+    right: 80px;
+  }
+  nav a:nth-child(3) {
+    width: 110px;
+  }
+  nav a:nth-child(3):hover ~ .animation {
+    width: 110px;
+    right: 190px;
+  }
+  nav a:nth-child(4) {
+    width: 120px;
+  }
+  nav a:nth-child(4):hover ~ .animation {
+    width: 120px;
+    right: 300px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .bgn {
+    height: 460px;
+  }
+}
+@media screen and (max-width: 620px) {
+  main .content h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.8em;
+  }
+  main .content img {
+    height: 320px;
+    margin: 5px 3% 15px 3%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .bgn {
+    height: 340px;
+  }
+}
+@media screen and (max-width: 530px) {
+  .header-title {
+    font-size: 14px;
+  }
+  nav {
+    height: 40px;
+  }
+  nav a {
+    line-height: 40px;
+  }
+  nav a:nth-child(1) {
+    width: 60px;
+  }
+  nav .start-home,
+  a:nth-child(1):hover ~ .animation {
+    width: 60px;
+    right: 0;
+  }
+  nav a:nth-child(2) {
+    width: 70px;
+  }
+  nav a:nth-child(2):hover ~ .animation {
+    width: 70px;
+    right: 60px;
+  }
+  nav a:nth-child(3) {
+    width: 70px;
+  }
+  nav a:nth-child(3):hover ~ .animation {
+    width: 70px;
+    right: 130px;
+  }
+  nav a:nth-child(4) {
+    width: 80px;
+  }
+  nav a:nth-child(4):hover ~ .animation {
+    width: 80px;
+    right: 200px;
+  }
+}
+@media screen and (max-width: 414px) {
+  main .content img {
+    height: 240px;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 393px) {
+  .bgn {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .header-title {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 280px) {
+  nav {
+    height: 37px;
+  }
+  nav a {
+    line-height: 37px;
+  }
+  nav a:nth-child(1) {
+    width: 55px;
+  }
+  nav .start-home,
+  a:nth-child(1):hover ~ .animation {
+    width: 55px;
+    right: 0;
+  }
+  nav a:nth-child(2) {
+    width: 40px;
+  }
+  nav a:nth-child(2):hover ~ .animation {
+    width: 40px;
+    right: 55px;
+  }
+  nav a:nth-child(3) {
+    width: 54px;
+  }
+  nav a:nth-child(3):hover ~ .animation {
+    width: 54px;
+    right: 94px;
+  }
+  nav a:nth-child(4) {
+    width: 56px;
+  }
+  nav a:nth-child(4):hover ~ .animation {
+    width: 56px;
+    right: 150px;
+  }
+  .header-title {
+    font-size: 0.6em;
+  }
+  main .content img {
+    height: 150px;
+    margin: 0;
+  }
+}
