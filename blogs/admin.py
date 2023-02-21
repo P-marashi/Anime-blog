@@ -19,11 +19,11 @@ make_publish.short_description = " منتشر کردن مقاله های انت�
 
 
 def make_draft(modeladmin, request, queryset):
-    query_updated = queryset.update(status="p")
+    query_updated = queryset.update(status="d")
     if query_updated == 1:
-        message_bit = "منتشر شد"
+        message_bit = "پیش نویس شد"
     else:
-        message_bit = " منتشر شدند "
+        message_bit = " پیش نویس شدند "
 
     modeladmin.message_user(request, " {} مقاله {} ".format(query_updated, message_bit))
 
