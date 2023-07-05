@@ -336,3 +336,4 @@ pip-selfcheck.json
 /media/uploads/
 /static/blog/image/reza_img.jpg
 /static/blog/image/pouya_img.jpg
+**/migrations/

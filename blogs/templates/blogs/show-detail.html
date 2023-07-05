@@ -1,80 +1,42 @@
+{% extends 'blogs/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="fa">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Show-detail</title>
-    <link rel="stylesheet" href="{% static  'blog/css/show-detail.css' %}" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
-    <link
-      href="http://awebfont.ir/css?id=1116"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="http://awebfont.ir/css?id=1939"
-      rel="stylesheet"
-      type="text/css"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <nav>
-          <a href="{% url 'blog:best_in_month' %}">انیمه های برتر ماه</a>
-          <a href="{% url 'blog:index' %}">خانه</a>
-          <a href="{% url 'blog:about_me' %}">درباره ما</a>
-          <!-- <a href="">ارتباط باما</a> -->
-          <div class="animation start-home"></div>
-        </nav>
-        <h1 class="header-title">Anime-blog</h1>
-        <!-- <input type="text" placeholder="Search . . ." required> -->
-      </header>
-      <img class="bgn" src="{{ article.thumbnail.url }}" alt="" />
-      <main>
-        <div class="card">
-          <div class="item">
-            <img src="{{ article.ve_thumbnail.url }}" alt="" />
-            <h1>{{ article.title }}</h1>
-            <p>{{ article.description_img|truncatewords:70 }}</p>
-          </div>
-        </div>
-        <section class="content">
+
+{% block main %}
+<body>
+  <div class="container">
+    <header>
+      <!-- Navigation -->
+      {% include 'blogs/Nav.html' %}
+    </header>
+    <img class="bgn" src="{{ article.thumbnail.url }}" alt="">
+    <main>
+      <!-- Article Card -->
+      <div class="card">
+        <div class="item">
+          <img src="{{ article.ve_thumbnail.url }}" alt="">
           <h1>{{ article.title }}</h1>
-          <p>{{ article.description|safe }}</p>
-        </section>
-        <section class="menu">
-          {% for article in published_articles %}
-          <span
-            ><a href="{{ article.absolute_url }}">{{ article.title }}</a></span
-          >
-          {% endfor %}
-        </section>
-      </main>
-      <footer>
-        <div class="footer-section">
-          <div class="socials">
-            <a
-              href="https://www.linkedin.com/in/pouya-marashi-3174a025b/"
-              class="fa-brands fa-linkedin"
-            ></a>
-            <a
-              href="https://instagram.com/anime___blog?igshid=YmMyMTA2M2Y="
-              class="fa-brands fa-instagram"
-            ></a>
-            <a
-              href="https://t.me/Anime_blg"
-              class="fa-solid fa-paper-plane"
-            ></a>
-          </div>
-          <h2>Anime-blog در شبکه های اجتماعی و پیام رسان ها</h2>
+          <p>{{ article.description_img|truncatewords:70 }}</p>
         </div>
-      </footer>
-    </div>
-  </body>
-</html>
+      </div>
+      <section class="content">
+        <!-- Article Content -->
+        <h1>{{ article.title }}</h1>
+        <p>{{ article.description|safe }}</p>
+      </section>
+      <section class="menu">
+        <!-- Related Articles Menu -->
+        {% for article in published_articles %}
+        <span style="background-image: url('{{ article.ve_thumbnail.url }}')">
+          <a href="{{ article.absolute_url }}">{{ article.title }}</a>
+        </span>
+        {% endfor %}
+      </section>
+    </main>
+    {% include 'blogs/Footer.html' %}
+  </div>
+</body>
+{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'blog/css/show-detail.css' %}" />
+{% endblock %}

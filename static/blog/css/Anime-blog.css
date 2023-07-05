@@ -152,7 +152,7 @@ section {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 850px;
     grid-auto-rows: 850px;
-    background-image: url(/static/blog/image/wallpaper-4k-anime-7.webp);
+    background-image: url('../image/bgn.jpg');
     background-size: cover;
     background-attachment: fixed;
     margin: auto;

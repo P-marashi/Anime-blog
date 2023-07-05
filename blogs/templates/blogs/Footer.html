@@ -1,0 +1,24 @@
+ <footer>
+            <div class="footer-button">
+                {% if articles.has_next %}
+                    <button class="btn1">
+                        <a href="{% url 'blog:index' articles.next_page_number %}">صفحه بعدی</a>
+                    </button>
+                {% endif %}
+                {% if articles.has_previous %}
+                    <button class="btn1">
+                        <a href="{% url 'blog:index' articles.previous_page_number %}">صفحه قبلی</a>
+                    </button>
+                {% endif %}
+            </div>
+            <div class="footer-section">
+                <!-- Social Media Links -->
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/pouya-marashi-3174a025b/" class="fa-brands fa-linkedin"></a>
+                    <a href="https://instagram.com/anime___blog?igshid=YmMyMTA2M2Y=" class="fa-brands fa-instagram"></a>
+                    <a href="https://t.me/Anime_blg" class="fa-solid fa-paper-plane"></a>
+                </div>
+                <!-- Footer Text -->
+                <h2>Anime-blog در شبکه های اجتماعی و پیام رسان ها</h2>
+            </div>
+        </footer>

@@ -1,31 +1,31 @@
 @font-face {
     font-family: 'B Yekan';
-    src: url('/static/blog/fron_reza/Yekan.ttf');
+    src: url('/static/blog/font/Yekan.ttf');
 
 }
 
 @font-face {
     font-family: 'B Yekan';
-    src: url('/static/blog/fron_reza/BYekan.woff');
+    src: url('/static/blog/font/BYekan.woff');
 }
 
 @font-face {
     font-family: 'B Yekan';
-    src: url('/static/blog/fron_reza/BYekan.woff2');
+    src: url('/static/blog/font/BYekan.woff2');
 }
 
 @font-face {
     font-family: '0 Titr Bold';
-    src: url('/static/blog/fron_reza/TitrBold.woff');
+    src: url('/static/blog/font/TitrBold.woff');
 
 }
 
 @font-face {
     font-family: '0 Titr Bold';
-    src: url('/static/blog/fron_reza/TitrBold.ttf');
+    src: url('/static/blog/font/TitrBold.ttf');
 }
 
 @font-face {
     font-family: '0 Titr Bold';
-    src: url('/static/blog/fron_reza/TitrBold.woff2');
+    src: url('/static/blog/font/TitrBold.woff2');
 }

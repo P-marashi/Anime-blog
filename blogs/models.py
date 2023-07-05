@@ -25,6 +25,9 @@ class ArtManager(models.Manager):
 class IPAddress(models.Model):
     user_ip = models.GenericIPAddressField(verbose_name="user_ip")
 
+    def __str__(self):
+        return self.user_ip
+
 
 class Article(models.Model):
     STATUS_CHOICES = (
